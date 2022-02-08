@@ -1,0 +1,82 @@
+.content {
+    .content__info {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #202020;
+        position: relative;
+    }
+    .content__border {
+        margin: 12px 0 24px 0;
+        width: 100%;
+        height: 1px;
+        background: #eaeaea;
+    }
+    .content__items {
+        .content__items-item {
+            list-style: none;
+            margin-bottom: 17px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .item-block {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .number {
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: #555556;
+                }
+            }
+        }
+    }
+    .content__filter {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 30px;
+        label {
+            margin-left: 12px;
+        }
+        input {
+            margin-left: auto;
+            &.apple-switch {
+                position: relative;
+                -webkit-appearance: none;
+                outline: none;
+                width: 26px;
+                height: 16px;
+                background: transparent;
+                border: 1px solid #eaeaea;
+                border-radius: 50px;
+                box-shadow: inset -20px 0 0 0 #eaeaea;
+                cursor: pointer;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background: transparent;
+                    background-color: #5b5b5b;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+                }
+                &:checked {
+                    box-shadow: inset 10px 0 0 0 #e6e6ff;
+                    border-color: #e6e6ff;
+                    &::after {
+                        background-color: #000046;
+                        left: 10px;
+                        box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+        }
+    }
+}

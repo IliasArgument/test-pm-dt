@@ -1,0 +1,45 @@
+.label {
+    cursor: pointer;
+}
+
+.input {
+    display: none;
+}
+
+.text {
+    color: #131313;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    white-space: nowrap;
+    display: flex;
+    white-space: pre-wrap;
+}
+
+.input + .text:before {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000046;
+    content: "";
+    display: inline-block;
+    margin: 0 16px 0 0;
+    padding: 0;
+    vertical-align: top;
+    border-radius: 50%;
+}
+
+.input:checked + .text:before {
+    background: #000046;
+    border: 1px solid #000046;
+    box-shadow: inset 0px 0px 0px 1px #fff;
+    color: #333;
+    content: "";
+    text-align: center;
+    border-radius: 50%;
+}
+
+.input:focus + .text::before {
+    outline: 0;
+}

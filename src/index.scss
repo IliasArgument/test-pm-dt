@@ -1,0 +1,319 @@
+html {
+    overflow-y: scroll;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    font-family: Montserrat;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    max-width: 100%;
+    background: #000070;
+}
+
+//menu start
+
+.menu__container {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 70px 100px 10px 70px;
+    background: #ffffff;
+    @media (max-width: 1250px) {
+        padding: 30px 30px 10px 30px;
+    }
+    @media (max-width: 1150px) {
+        padding: 30px 30px 10px 30px;
+    }
+    @media (max-width: 770px) {
+        padding: 20px 20px 10px 20px;
+    }
+    .menu__container-title {
+        margin-right: 20px;
+        @media (max-width: 550px) {
+            margin-right: 0;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            color: #202020;
+            display: inline-block;
+            position: relative;
+            @media (max-width: 770px) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+            span {
+                color: rgba(0, 150, 199, 1);
+                font-weight: 900;
+                padding: 0 14px;
+                white-space: nowrap;
+                @media (max-width: 770px) {
+                    padding: 0 14px 0 0;
+                }
+            }
+            &::after {
+                content: "";
+                width: 170px;
+                height: 1px;
+                background: #000046;
+                position: absolute;
+                bottom: -17px;
+                left: 0;
+            }
+        }
+    }
+
+    .menu__container-subtitle {
+        margin-top: 32px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @media (max-width: 770px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        p {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: #5b5b5b;
+            @media (max-width: 770px) {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        .menu__container__button-filters {
+            margin-left: auto;
+            display: none;
+            width: 48px;
+            height: 48px;
+            background: #f4f6fc;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.7;
+            }
+            @media (max-width: 870px) {
+                &.active {
+                    display: block;
+                }
+            }
+            @media (max-width: 770px) {
+                margin-top: -33px;
+            }
+        }
+
+        .menu__container__button-filters-close {
+            margin-left: auto;
+            width: 40px;
+            height: 40px;
+            left: 315px;
+            top: 20px;
+            background: #ffffff;
+            box-shadow: 0px 0px 8px rgba(13, 74, 145, 0.15);
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.7;
+            }
+            @media (max-width: 770px) {
+                margin-top: -33px;
+            }
+        }
+    }
+    .menu__container-accordeon {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @media (max-width: 770px) {
+            justify-content: flex-start;
+            margin-left: 0;
+            margin-top: 23px;
+        }
+        .menu__container-accordeon-text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #0096c7;
+            display: inline-block;
+        }
+        img {
+            width: 12px;
+            height: 6px;
+            margin-left: 22px;
+        }
+    }
+}
+
+//section cards
+.menu__container-content {
+    display: flex;
+    @media (max-width: 410px) {
+        display: block;
+    }
+    .content__left {
+        flex-basis: 70%;
+        position: relative;
+        @media (max-width: 1075px) {
+            flex-basis: 100%;
+        }
+        .section__cards {
+            margin: 40px 40px 140px 0;
+            // position: relative;
+            @media (max-width: 870px) {
+                margin: 40px 20px 40px 0;
+            }
+            @media (max-width: 550px) {
+                margin: 40px 0 40px 0;
+            }
+        }
+        &.hide {
+            display: none;
+        }
+    }
+
+    .content__right {
+        margin-top: 40px;
+        flex-basis: 30%;
+        @media (max-width: 870px) {
+            flex-basis: 100%;
+            display: none;
+        }
+        &.show {
+            display: block;
+        }
+        .section__filters {
+            .section__filters-title {
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 32px;
+                color: #202020;
+                margin-bottom: 15px;
+            }
+            .filter {
+                &__image {
+                    padding: 22px 24px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                }
+                &__age {
+                    padding: 22px 24px;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                    .content {
+                        & .content__info {
+                            font-family: Montserrat;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 28px;
+                            color: #202020;
+                            position: relative;
+                        }
+                        & .content__border {
+                            margin: 12px 0 24px 0;
+                            width: 100%;
+                            height: 1px;
+                            background: #eaeaea;
+                        }
+                        & .content__sort__age {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            & .sort__age {
+                                margin: 0 10px;
+                                width: 110px;
+                                height: 40px;
+                                border: 1px solid #eaeaea;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            & .sort-text {
+                                font-family: Montserrat;
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 20px;
+                                text-align: center;
+                                color: #202020;
+                            }
+                        }
+                    }
+                }
+                &__gender {
+                    padding: 22px 24px;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                }
+                &__salary {
+                    padding: 22px 24px;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                }
+                &__experience {
+                    padding: 22px 24px;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                }
+                &__language {
+                    padding: 22px 24px;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                }
+                &__employment {
+                    padding: 22px 24px;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                }
+                &__education {
+                    padding: 22px 24px;
+                    margin-bottom: 15px;
+                    @media (max-width: 400px) {
+                        padding: 18px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background: #000070;
+}

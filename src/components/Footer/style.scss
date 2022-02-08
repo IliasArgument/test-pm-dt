@@ -1,0 +1,185 @@
+.footer {
+    max-width: 1240px;
+    margin: 0 auto;
+    .footer__info {
+        padding-top: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 70px;
+        padding-right: 10px;
+        @media (max-width: 1100px) {
+            justify-content: center;
+            padding-left: 10px;
+        }
+        @media (max-width: 860px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width: 400px) {
+            padding-top: 150px;
+        }
+        .footer__info-other {
+            margin-bottom: 40px;
+            .other__title {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: capitalize;
+                color: #ffffff;
+            }
+            .other__lists {
+                list-style: none;
+                margin-top: 20px;
+                .other__lists-list {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #ffffff;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .footer__info-cooperation {
+            margin: 0 150px 0 150px;
+            @media (max-width: 1300px) {
+                margin: 0 75px 0 75px;
+            }
+            @media (max-width: 860px) {
+                margin: 0 20px 40px 20px;
+            }
+
+            .cooperation__title {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: capitalize;
+                color: #ffffff;
+            }
+            .cooperation__lists {
+                list-style: none;
+                margin-top: 20px;
+                text-align: center;
+                .cooperation__lists-list {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #ffffff;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:last-child {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        .footer__info-social {
+            .social__lists {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .social__lists-list {
+                    margin-right: 19px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:last-child {
+                        margin-right: none;
+                    }
+                }
+            }
+        }
+    }
+    .footer__line {
+        width: 100%;
+        height: 1px;
+        background-color: #eaeaea;
+        margin-bottom: 20px;
+        padding: 0 10px;
+        @media (max-width: 1350px) {
+            width: 90%;
+            margin: 0 auto 20px auto;
+        }
+    }
+    .footer__privacy {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+        @media (max-width: 400px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .footer__privacy__lists {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 16px 0;
+
+            @media (max-width: 843px) {
+            }
+
+            .footer__privacy__lists-list {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #ffffff;
+                display: flex;
+                padding: 0 60px 0 60px;
+                position: relative;
+                cursor: pointer;
+
+                @media (max-width: 843px) {
+                    padding: 0 60px 0 60px;
+                }
+                @media (max-width: 550px) {
+                    padding: 0 15px 0 15px;
+                }
+
+                &.first::after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 16px;
+                    right: 0;
+                    background-color: #eaeaea;
+                }
+                &.second::after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 16px;
+                    right: 0;
+                    background-color: #eaeaea;
+                    @media (max-width: 843px) {
+                        display: none;
+                    }
+                }
+                @media (max-width: 843px) {
+                    &.second {
+                        order: 3;
+                    }
+                    &.third {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}

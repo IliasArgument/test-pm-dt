@@ -1,0 +1,91 @@
+.content {
+    & .content__info {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #202020;
+        position: relative;
+    }
+    & .content__border {
+        margin: 12px 0 24px 0;
+        width: 100%;
+        height: 1px;
+        background: #eaeaea;
+    }
+    & .content__sort__age {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .sort__age {
+            margin: 0 10px;
+            width: 110px;
+            height: 40px;
+            border: 1px solid #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & .sort-text {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: #202020;
+        }
+    }
+    .content__checkbox {
+        margin-top: 31px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        label {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: #202020;
+        }
+        input {
+            margin-left: auto;
+            &.apple-switch {
+                position: relative;
+                -webkit-appearance: none;
+                outline: none;
+                width: 26px;
+                height: 16px;
+                background: transparent;
+                border: 1px solid #eaeaea;
+                border-radius: 50px;
+                box-shadow: inset -20px 0 0 0 #eaeaea;
+                cursor: pointer;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background: transparent;
+                    background-color: #5b5b5b;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+                }
+                &:checked {
+                    box-shadow: inset 10px 0 0 0 #e6e6ff;
+                    border-color: #e6e6ff;
+                    &::after {
+                        background-color: #000046;
+                        left: 10px;
+                        box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+        }
+    }
+}

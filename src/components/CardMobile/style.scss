@@ -1,0 +1,176 @@
+.card__mobile {
+    padding: 18px;
+    flex-direction: column;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    margin: 20px 0 30px 0;
+    display: none;
+    @media (max-width: 690px) {
+        display: flex;
+    }
+    @media (max-width: 550px) {
+        margin: 10px 0 30px 0;
+    }
+    .card__mobile__first-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .section__avatar {
+            width: 120px;
+            height: 120px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 1px solid rgb(240, 240, 240);
+            object-fit: cover;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            & img {
+                transition: 1s;
+                display: block;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            @media (max-width: 550px) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .section__info {
+            padding-left: 16px;
+            .section__title {
+                font-weight: 600;
+                font-size: 21px;
+                line-height: 20px;
+                color: #202020;
+                @media (max-width: 550px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 430px) {
+                    font-size: 14px;
+                }
+                @media (max-width: 385px) {
+                    font-size: 12px;
+                }
+            }
+
+            .section__subtitle {
+                font-weight: normal;
+                font-size: 21px;
+                line-height: 20px;
+                color: #202020;
+                margin: 10px 0;
+                @media (max-width: 550px) {
+                    font-size: 16px;
+                }
+            }
+            .section__location-icon {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 16px;
+                color: #202020;
+
+                background-image: url("../../assets/menu-icon/loc.png");
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                @media (max-width: 550px) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .card__mobile__second-section {
+        .section__experience-list {
+            margin-top: 20px;
+            .section__list-item {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                display: flex;
+                align-items: center;
+                color: #5b5b5b;
+                margin-bottom: 12px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .card__mobile__third-section {
+        position: relative;
+        .section__online {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 18px 5px 12px 0;
+            .section__online-icon {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                box-sizing: border-box;
+                border-radius: 50%;
+                background: #4caf50;
+                margin-right: 5px;
+            }
+            .section__online-color {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 15px;
+                color: #4caf50;
+            }
+        }
+        .section__btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .section__btn-group {
+                display: flex;
+                position: relative;
+                .button {
+                    background: #ffffff;
+                    border: 0.5px solid #eaeaea;
+                    border-radius: 8px;
+                    margin-right: 12px;
+                    width: 46px;
+                    height: 46px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    @media (max-width: 550px) {
+                        border: none;
+                        width: 25px;
+                        height: 25px;
+                        &.dots {
+                            margin-right: -10px;
+                        }
+                        &.like {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            .section__online-text {
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+                color: #adadad;
+            }
+        }
+    }
+
+    @media (max-width: 380px) {
+        padding: 10px;
+    }
+}

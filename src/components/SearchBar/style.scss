@@ -1,0 +1,96 @@
+.headre__item-title {
+    display: none;
+    @media (max-width: 570px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 17px;
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            color: #ffffff;
+            padding-left: 14px;
+        }
+    }
+}
+
+.headre__item-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 85px 0 60px 0;
+    @media (max-width: 890px) {
+        display: block;
+        margin: 0 33px;
+        padding: 85px 0 20px 0;
+    }
+    @media (max-width: 570px) {
+        padding: 33px 0 20px 0;
+    }
+    .search__form {
+        display: flex;
+        @media (max-width: 690px) {
+            flex-direction: column;
+        }
+        gap: 12px 0;
+        .search__form-input {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            color: #ffffff;
+            display: inline-block;
+            position: relative;
+            padding: 13px 8px 13px 46px;
+            margin-right: 8px;
+            &::placeholder {
+                color: #ffffff;
+            }
+            &.position {
+                width: 410px;
+                background-image: url("../../assets/header-icon/zoom.png");
+                background-repeat: no-repeat;
+                background-position: 12px 11px, center;
+                @media (max-width: 890px) {
+                    width: 100%;
+                }
+            }
+
+            &.city {
+                width: 205px;
+                background-image: url("../../assets/header-icon/pin.png");
+                background-repeat: no-repeat;
+                background-position: 12px 11px, center;
+                @media (max-width: 890px) {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 690px) {
+                margin-right: 0;
+            }
+        }
+        .search__form-btn {
+            width: 199px;
+            height: 48px;
+            background: #fff9e4;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: #303030;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+            @media (max-width: 890px) {
+                width: 100%;
+            }
+        }
+    }
+}

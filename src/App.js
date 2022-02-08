@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Home from './pages/Home';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getUsersData } from './store/actions';
 
 
@@ -10,7 +10,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getUsersData())
-  }, [])
+  }, [dispatch])
 
 
   return (

@@ -27,7 +27,6 @@ const Cards = ({ users }) => {
                     userId={user.id}
                     experience={user.workexperience}
                     avatar={user.photo}
-                    key={user.id}
                 />
             ))}
         </>

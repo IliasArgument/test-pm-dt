@@ -20,7 +20,7 @@ const CardMobile = (props) => {
         if (popupRef?.current && !popupRef?.current.contains(e.target)) {
             setActivePopup(false);
         }
-    }, [activePopup, popupRef]);
+    }, [popupRef]);
 
     useEffect(() => {
         if (activePopup) {

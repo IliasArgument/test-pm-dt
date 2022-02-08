@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import markIcon from '../../../assets/menu-icon/mark.png';
 import './style.scss';
 

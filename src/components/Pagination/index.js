@@ -9,7 +9,6 @@ const PaginationComponent = ({ data, onChange }) => {
     const { total_count } = data;
     const [page, setPage] = useState(1);
 
-
     const handleChange = (e, value) => {
         setPage(value)
         onChange(value)

@@ -7,6 +7,8 @@ import vectorMenuIcon from '../../assets/menu-icon/vector-menu.png';
 import outlineMenuIcon from '../../assets/menu-icon/outline.png';
 import filtersMenuIcon from '../../assets/menu-icon/filters.png';
 import closeMenuIcon from '../../assets/menu-icon/close.png';
+import warningIcon from '../../assets/header-icon/warning.png';
+
 import FilterRange from '../../components/Filter/FilterRange';
 import FilterCheckbox from '../../components/Filter/FilterCheckbox';
 import HeaderNavigation from '../../components/HeaderNavigation';
@@ -25,7 +27,7 @@ import Loader from '../../components/Loader';
 const Home = () => {
 
 
-    const { users, isLoading } = useSelector(state => state);
+    const { users, isLoading, isError } = useSelector(state => state);
     const dispatch = useDispatch();
 
     const [width, setWidth] = useState(null);
@@ -66,7 +68,16 @@ const Home = () => {
     const onToggleChange = useCallback((boolean) => {
         setIsToggle(boolean);
         dispatch(getFilteredUsersByPhotos(boolean));
-    }, [isToggle]);
+    }, [dispatch]);
+
+    const onErrorFunction = () => {
+        return (
+            <div className="warning">
+                <img src={warningIcon} alt={warningIcon} />
+                <h3>Что то пошло не так как ты хотел(</h3>
+            </div>
+        )
+    }
 
     return (
         <>
@@ -99,6 +110,7 @@ const Home = () => {
                     </div>
                     <div className="menu__container-content">
                         <div className={`content__left ${isFilters ? 'hide' : ''}`}>
+                            {isError && onErrorFunction()}
                             {isLoading && <Loader />}
                             <section className="section__cards">
                                 <Cards users={users?.results} />

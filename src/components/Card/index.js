@@ -9,8 +9,7 @@ import { useSelector } from 'react-redux';
 
 
 const Card = (props) => {
-    const { firstName, experience, id, avatar } = props
-
+    const { firstName, experience, avatar } = props
     const { isLoading } = useSelector(state => state);
 
     const popupRef = useRef();
@@ -20,7 +19,7 @@ const Card = (props) => {
         if (popupRef?.current && !popupRef?.current.contains(e.target)) {
             setActivePopup(false);
         }
-    }, [activePopup]);
+    }, []);
 
     useEffect(() => {
         if (activePopup) {
